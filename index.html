@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parcial lenguajes Formulario</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <header class="encabezado-sitio">
+        <div class="encabezado-interior">
+        <span class="encabezadoa">UCASAL 2026  Lenguajes III</span>
+        </div>
+        <div class="encabezado-decoracion" aria-hidden="true"></div>
+    </header>
+
+    <main>
+        <section class="tarjeta" id="tarjeta-formulario">
+        <div class="tarjeta-etiqueta">Formulario de Inscripción</div>
+        <div class="cuerpo-formulario">
+            <div class="grupo-campo">
+            <label class="etiqueta-campo" for="nombre">Nombre y Apellido</label>
+            <input
+                class="entrada-campo"
+                type="text"
+                id="nombre"
+                placeholder="Juan Quinteros"
+            />
+            <span class="mensaje-campo" id="msg-nombre"></span>
+            </div>
+
+            <div class="grupo-campo">
+            <label class="etiqueta-campo" for="dni">DNI</label>
+            <input
+                class="entrada-campo"
+                type="text"
+                id="dni"
+                placeholder="Ej: 46669525"
+                maxlength="8"
+            />
+            <span class="mensaje-campo" id="msg-dni"></span>
+            </div>
+
+            <div class="grupo-campo">
+            <label class="etiqueta-campo" for="fechaNacimiento">Fecha de Nacimiento</label>
+            <input
+                class="entrada-campo"
+                type="date"
+                id="fechaNacimiento"
+            />
+            <span class="mensaje-campo" id="msg-fecha"></span>
+            </div>
+            <div id="msg-global" class="mensaje-global" aria-live="polite"></div>
+
+            <!-- Botones-->
+            <div class="fila-botones">
+            <button class="boton boton-principal" id="btn-enviar" type="button">
+                <span></span>Enviar
+            </button>
+            <button class="boton boton-secundario" id="btn-preguntas" type="button">
+                <span></span>Preguntas
+            </button>
+            </div>
+
+        </div>
+        
+        </section>
+        <section class="tarjeta" id="tarjeta-respuestas" style="display:none;">
+        <h2 class="tarjeta-titulo">Respuestas</h2>
+        <div id="contenedor-respuestas"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Quinteros Navarro, Juan Ignacio</p>
+        <p>DNI: 46669525</p>
+    </footer>
+
+    <script src="jquery-4.0.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
